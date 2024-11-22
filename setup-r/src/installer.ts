@@ -254,6 +254,7 @@ async function acquireUtilsMacOS() {
     process.env.HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK = "true";
     await exec.exec("brew", [
       "install",
+      "-vd",
       "qpdf",
       "pkgconfig",
       "checkbashisms",
