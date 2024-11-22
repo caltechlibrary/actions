@@ -254,7 +254,7 @@ async function acquireUtilsMacOS() {
     process.env.HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK = "true";
     await exec.exec("brew", [
       "install",
-      "-vd",
+      "-v",
       "qpdf",
       "pkgconfig",
       "checkbashisms",
@@ -263,7 +263,7 @@ async function acquireUtilsMacOS() {
   } catch (error) {
     core.debug(`${error}`);
 
-    throw `Failed to install qpdf: ${error}`;
+    throw `Failed and failed and failed to install qpdf: ${error}`;
   }
 }
 
